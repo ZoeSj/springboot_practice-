@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: exercise
+
+nacos:
+  discovery:
+    server-addr: 127.0.0.1:18848
+    auto-register: true
+    namespace:
+    register:
+      service-name: ${spring.application.name}
+      group-name: DEFAULT_GROUP
+      cluster-name:
