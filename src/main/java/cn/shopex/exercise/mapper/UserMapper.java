@@ -1,6 +1,7 @@
 package cn.shopex.exercise.mapper;
 
 import cn.shopex.exercise.entity.User;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * @Create 2020/11/26
  * @description:
  **/
+@Mapper
 public interface UserMapper {
     /**
      * 根据用户名查询用户结果集

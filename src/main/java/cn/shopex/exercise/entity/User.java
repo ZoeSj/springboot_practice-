@@ -1,6 +1,5 @@
 package cn.shopex.exercise.entity;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -8,20 +7,12 @@ import java.io.Serializable;
  * @Create 2020/11/18
  * @description:
  **/
-@Entity(name = "t_user")
 public class User implements Serializable {
     private static final long serialVersionUID = 8655851615465363473L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;
-    /**
-     * TODO 忽略该字段的映射
-     */
-    @Transient
-    private String email;
 
     public Long getId() {
         return id;
