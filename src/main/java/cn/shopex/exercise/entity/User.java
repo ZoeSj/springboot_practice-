@@ -1,20 +1,33 @@
 package cn.shopex.exercise.entity;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
 /**
  * @Auther shengjia
  * @Create 2020/11/18
  * @description:
  **/
-public class User {
-    private long id;
+@Entity(name = "t_user")
+public class User implements Serializable {
+    private static final long serialVersionUID = 8655851615465363473L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String username;
     private String password;
+    /**
+     * TODO 忽略该字段的映射
+     */
+    @Transient
+    private String email;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
